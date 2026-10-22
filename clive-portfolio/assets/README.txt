@@ -1,0 +1,1 @@
+Put your photo here as profile.jpg and your resume as resume.pdf

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clive Kiros Orias — Software Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Clive Kiros Orias, software engineer building products end to end.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="kiros.css">
+</head>
+
+<body>
+
+  <div id="loading-screen" aria-hidden="true">
+    <div class="loader-grid"></div>
+    <div class="loader-content">
+      <div class="loader-icons">
+        <div class="loader-icon" style="--delay:0s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <div class="loader-icon" style="--delay:.15s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <div class="loader-icon" style="--delay:.3s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+            <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
+            </path>
+            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+          </svg>
+        </div>
+      </div>
+      <p class="loader-title">Welcome to my <span>Portfolio</span></p>
+      <div class="loader-bar-track">
+        <div class="loader-bar-fill" id="loader-bar-fill"></div>
+      </div>
+      <p class="loader-status" id="loader-status">Initializing…</p>
+    </div>
+  </div>
+
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+  <header id="site-header">
+    <a href="#home" class="brand">
+      <span class="brand-mark">C</span>
+      <span class="brand-text">
+        <span class="brand-name">Clive Kiros Orias</span>
+        <span class="brand-role">SOFTWARE DEVELOPER</span>
+      </span>
+    </a>
+
+    <nav class="top-nav" aria-label="Primary">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#portfolio" class="nav-link">Portfolio</a>
+      <a href="#playground" class="nav-link">Playground</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+
+  <main>
+
+
+    <section id="home" class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <h1 class="hero-title">
+          <span class="reveal-line">Web Application</span>
+          <span class="reveal-line accent">Developer.</span>
+        </h1>
+
+        <p class="hero-sub reveal">
+          I'm Clive. I design and build reliable web apps and platforms
+          from the interface down to the database and I'm
+          currently looking for my next project to work on.
+        </p>
+
+        <div class="hero-actions reveal">
+          <a href="#contact" class="btn btn-pill btn-light">Schedule a Meeting <span class="arrow">→</span></a>
+          <a href="#portfolio" class="btn btn-pill btn-outline">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            View My Work
+          </a>
+          <a href="#" class="btn btn-pill btn-outline" id="download-cv">
+            Download CV
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+
+        <div class="hero-stats reveal">
+          <div class="stat"><span class="stat-num" data-count="2">0</span><span class="stat-label">Years
+              Experience</span></div>
+          <div class="stat"><span class="stat-num" data-count="2">0</span><span class="stat-label">Projects
+              Delivered</span></div>
+          <div class="stat"><span class="stat-num" data-count="12">0</span><span class="stat-label">Happy Clients</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-hidden="true">
+        <div class="visual-orb">
+          <svg viewBox="0 0 200 200">
+            <circle class="orb-ring" cx="100" cy="100" r="88"></circle>
+            <circle class="orb-ring orb-ring-dashed" cx="100" cy="100" r="70"></circle>
+          </svg>
+          <div class="orb-photo" id="orb-photo">
+            <img src="assets/profile.jpg" alt="Clive Kiros Orias" id="orb-photo-img">
+            <span class="orb-fallback">&lt;/&gt;</span>
+          </div>
+        </div>
+        <div class="visual-card visual-card-1">
+          <span class="dot green"></span> Build passing
+        </div>
+        <div class="visual-card visual-card-2">
+          <span class="mono">DB</span> Supabase connected
+        </div>
+      </div>
+
+      <button class="scroll-cue" id="scroll-cue" aria-label="Scroll to about">
+        <span></span>
+      </button>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="section-head reveal">
+        <p class="eyebrow small">About</p>
+        <h2>A little about how I work</h2>
+      </div>
+      <div class="about-grid">
+        <p class="about-copy reveal">
+          I'm a software developer who enjoys taking a product from a rough idea to something people actually use. I
+          care about clean interfaces, fast load times, and code that the next person can understand. Lately I've been
+          building full-stack web applications with vanilla JavaScript on the front end and Supabase for auth, storage,
+          and the database no heavier than a project needs to be.
+        </p>
+        <ul class="about-facts reveal">
+          <li><span>Based in</span><strong>Philippines</strong></li>
+          <li><span>Focus</span><strong>Web apps & platforms</strong></li>
+          <li><span>Currently</span><strong>Open to new projects</strong></li>
+          <li><span>Reach me</span><strong>clivekirosorias@gmail.com</strong></li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section id="skills" class="section skills">
+      <div class="section-head reveal">
+        <p class="eyebrow small">Skills</p>
+        <h2>Tools I reach for</h2>
+      </div>
+      <div class="skills-marquee-wrap reveal" id="skills-marquee-wrap"><!-- populated by orias.js --></div>
+    </section>
+
+
+    <section id="portfolio" class="section portfolio">
+      <div class="section-head reveal">
+        <p class="eyebrow small">Portfolio</p>
+        <h2>Selected work</h2>
+        <p class="section-note" id="portfolio-note"></p>
+      </div>
+      <div class="portfolio-grid" id="portfolio-grid">
+        <div class="project-card skeleton"></div>
+        <div class="project-card skeleton"></div>
+        <div class="project-card skeleton"></div>
+      </div>
+    </section>
+
+    <section id="playground" class="section playground">
+      <div class="section-head reveal">
+        <p class="eyebrow small">Playground</p>
+        <h2>Take a break, play a round</h2>
+        <p class="section-note">A tiny Tetris clone — same stack as the rest of this site: plain JavaScript, no
+          libraries. Beat your score and save it below.</p>
+      </div>
+
+      <div class="game-wrap reveal">
+        <div class="game-board-wrap">
+          <canvas id="tetris-canvas" width="220" height="440" aria-label="Tetris game board"></canvas>
+          <div class="game-overlay" id="game-overlay">
+            <p class="game-overlay-title">Tetris</p>
+            <p class="game-overlay-sub">Arrow keys to move &middot; Up to rotate &middot; Space to drop</p>
+            <button class="btn btn-pill btn-light" id="game-start-btn" type="button">Start Game</button>
+          </div>
+        </div>
+
+        <div class="game-side">
+          <div class="game-stat"><span>Score</span><strong id="game-score">0</strong></div>
+          <div class="game-stat"><span>Lines</span><strong id="game-lines">0</strong></div>
+
+          <div class="game-controls-mobile">
+            <button type="button" data-action="left" aria-label="Move left">&larr;</button>
+            <button type="button" data-action="rotate" aria-label="Rotate">&#8635;</button>
+            <button type="button" data-action="right" aria-label="Move right">&rarr;</button>
+            <button type="button" data-action="down" aria-label="Move down">&darr;</button>
+            <button type="button" data-action="drop" aria-label="Hard drop">&#8681;</button>
+          </div>
+
+          <div class="game-leaderboard">
+            <p class="leaderboard-title">Top scores</p>
+            <ol id="leaderboard-list">
+              <li class="leaderboard-empty">No scores yet — be the first.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="section-head reveal">
+        <p class="eyebrow small">Contact</p>
+        <h2>Let's build something</h2>
+        <p class="section-note">Send a message and it lands straight in my inbox table &mdash; I'll reply by email.</p>
+      </div>
+
+
+      <form id="contact-form" class="contact-form reveal" novalidate>
+        <div class="field">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" autocomplete="email" required>
+        </div>
+        <div class="field field-full">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="5" required></textarea>
+        </div>
+        <div class="field field-full form-footer">
+          <button type="submit" class="btn btn-pill btn-light" id="cf-submit">
+            <span class="btn-label">Send Message</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+          </button>
+          <p class="form-msg" id="cf-msg" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Clive Kiros Orias. Built with HTML, CSS, JS &amp; Supabase.</p>
+    <div class="footer-links">
+      <a href="https://github.com/Cliveorias" aria-label="GitHub">GitHub</a>
+      <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      <a href="mailto:clivekirosorias@gmail.com" aria-label="Email">Email</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="Config.js"></script>
+  <script src="supabase.js"></script>
+  <script src="tetris.js"></script>
+  <script src="orias.js"></script>
+</body>
+
+</html>
